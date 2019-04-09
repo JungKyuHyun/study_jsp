@@ -7,3 +7,9 @@
 127.0.0.1 - - [09/Apr/2019:12:56:55 +0900] "GET /JSPlap/Ex03_JavaCode.jsp HTTP/1.1" 200 281
 127.0.0.1 - - [09/Apr/2019:12:57:25 +0900] "GET /JSPlap/Ex04_login.html HTTP/1.1" 200 285
 127.0.0.1 - - [09/Apr/2019:12:58:29 +0900] "POST /JSPlap/Ex04_request.jsp HTTP/1.1" 200 551
+127.0.0.1 - - [09/Apr/2019:13:08:52 +0900] "GET /JSPlap/Ex05_request.html HTTP/1.1" 200 615
+0:0:0:0:0:0:0:1 - - [09/Apr/2019:13:09:26 +0900] "GET /JSPlap/Ex05_request.html HTTP/1.1" 200 615
+0:0:0:0:0:0:0:1 - - [09/Apr/2019:13:09:26 +0900] "GET /favicon.ico HTTP/1.1" 404 1126
+127.0.0.1 - - [09/Apr/2019:13:09:40 +0900] "GET /JSPlap/Ex05_request.jsp?userid=hong&pwd=1004&hobby=aa HTTP/1.1" 200 272
+127.0.0.1 - - [09/Apr/2019:13:09:53 +0900] "GET /JSPlap/Ex05_request.jsp?userid=ewrw&pwd=ewrwer&hobby=baseball&hobby=soccer&hobby=basketball HTTP/1.1" 200 334
+127.0.0.1 - - [09/Apr/2019:13:11:38 +0900] "GET /JSPlap/Ex05_request.jsp?userid=ewrw&pwd=ewrwer&hobby=baseball&hobby=soccer&hobby=basketball HTTP/1.1" 200 334
