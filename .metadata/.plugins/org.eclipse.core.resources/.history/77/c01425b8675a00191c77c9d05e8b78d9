@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+[get 방식]
+1. name 속성
+Ex02_Register.jsp?uerid=kglim&pwd=1004&hobby=a&hobby=b
+
+2. id 속성( UI > css, javascript, jquery)
+3. name="userid", id="userid
+ -->
+	<form action="Ex02_Register.jsp" method="post">
+		<input type="text" name="userid"><br>
+		<input type="text" name="pwd"><br>
+		<input type="text" name="hobby" value="baseball">baseball<br>
+		<input type="text" name="hobby" value="soccer">soccer<br>
+		<input type="text" name="hobby" value="basketball">basketball<br>
+		<input type"submit" value="회원가입">
+	</form>
+	
+</body>
+</html>

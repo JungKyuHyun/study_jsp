@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<%
+	/*
+		일반적으로 : 클라이언트에서 입력된 데이터 받기
+		Tomcat 내장객체: request, response
+	*/
+	String uid = request.getParameter("userid"); //단일값 
+	String pwd = request.getParameter("pwd"); //단일값
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>
