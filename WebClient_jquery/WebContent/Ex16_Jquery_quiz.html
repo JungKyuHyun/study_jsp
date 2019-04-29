@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+.float_center {
+    float: center;
+}
+
+.layout {
+    margin: 10px;
+    width: 700px;
+}
+
+.pocket {
+    border: solid 1px #000;
+    height: 300px;
+    padding: 0px;
+    vertical-align: top;
+}
+
+.dnd {
+    width: 100%;
+}
+
+.dnd tr {
+    height: 30px;
+}
+
+.dnd td {
+    border-bottom: solid 1px #aaa;
+}
+
+.btn {
+    height: 20px;
+    border: solid 2px black;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+</style>
+
+<script type="text/javascript">
+	function move(){
+	   var table1 = (arguments[0] == "AB") ? document.getElementById("rightTable") : document.getElementById("leftTable");
+	   var table2 = (arguments[0] == "AB") ? document.getElementById("leftTable") : document.getElementById("rightTable");
+	   for(var i=table1.rows.length-1; i>-1; i--){
+	   	   if(table1.rows[i].cells[0].childNodes[0].checked){
+	   	      table2.childNodes[0].appendChild(table1.rows[i]);
+	   	      table2.rows[table2.rows.length-1].cells[0].childNodes[0].checked = true;
+	   	   }
+	   }
+}
+</script>
+
+</head>
+<body>
+    <table class="layout float_center">
+        <colgroup>
+            <col width="45%">
+            <col width="10%">
+            <col width="45%">
+        </colgroup>
+        <tr>
+            <td class="pocket center">
+                <table id="leftTable" class="dnd">
+                    <tr>
+                        <td><input type="checkbox" name="cb"></td>
+                        <td>test1</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="cb"></td>
+                        <td>test2</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="cb"></td>
+                        <td>test3</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="cb"></td>
+                        <td>test4</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="cb"></td>
+                        <td>test5</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="cb"></td>
+                        <td>test6</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="center">
+            	<span id="add" class="btn" onclick="move('AB')">추가</span> <br>
+                <br> 
+                <span id="del" class="btn" onclick="move('BA')">삭제</span>
+            </td>
+            <td class="pocket center">
+                <table id="rightTable" class="dnd">
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

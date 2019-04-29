@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript">
+	/*
+		jQuery.get( url [, data ] [, success ] [, dataType ] )
+	>> javascript
+	>> httpReq.open("GET", "Ex03_Company.xml")
+	
+	     JAVA : for(String s : array or collection){}
+         javascript : for(var s in 배열(Array)){}
+                      for(var index in Array){  Array[index]}
+                      for(var key in Object(json)){} 
+         Jquery : each()문  
+         
+         jquery : 핵심(ajax 비동기 처리)
+         1.$(selector).each(function(){ this });
+         2.$(selector).each(function(index){ this });
+         1.$(selector).each(function(index ,element){ element });
+         
+         *selector 없는 each
+         1.$.each(selector, function(){this})
+         2.$.each(selector, function(index){this})
+         3.$.each(selector, function(index, element){element})
+	*/
+	$(function(){
+		$('#btn').click(function(){
+			$.get("Ex03_Company.xml", function(data){
+				console.log(data);
+				//개발자 마음(데이터 가공)
+				
+				$('#display').empty(); //자식 요소 제거(remove()는 자기까지 제거 )
+				console.log($(data).find('Company')); //find 함수 결과 : 배열객체 [Company, Company] >> Array
+				
+				
+				//편하게 살려면 each(function(index, element))
+				$(data).find("Company").each(function(index){
+					console.log(index + " : " + $(this).text());
+				});
+				
+			
+				
+				$(data).find("Company").each(function(){
+					const entry = $(this);
+					console.log("entry : " + entry);
+					
+					const htmlAttr = entry.attr("CompanyType");
+					console.log("htmlAttr : " + htmlAttr);
+					
+					let html = "<div>" + entry.find("CompanyName").text() + "</div><br>";
+					html += "<div>" + entry.find("CompanyNubmer").text() + "</div><br>";
+					html += "<div>" + entry.find("CompanyAddress").text() + "</div><br>";
+					html += "<div>" + entry.find("Name").text() + "</div><br>";
+					
+					console.log(html);
+				});
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			});
+		})		
+	});
+</script>
+
+</head>
+<body>
+	<input type="button" id="btn" value="회사소개">
+	<div id="display" style="background-color: gray">DATA</div>
+</body>
+</html>

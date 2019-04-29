@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	//$(document).ready(function() {});
+	
+	//일반 자바스크립트 함수 안에서 jquery 사용 가능
+		//1. arrayobj 배열(Array)에 아래처럼 객체 추가하세요.
+		//[
+		//{grade:101th,name: 홍길동,number: 10}
+		//{grade:102th,name: 김유신,number: 20}
+		//{grade:103th,name: 유관순,number: 30}
+		//]
+	function javascriptFunc(){
+        let arrayobj=[
+        	
+        ];
+        const rows = document.getElementById("tableId").getElementsByTagName("tr").length;
+        console.log(rows);
+        for(let i=1; i<rows; i++){
+        	let grade = document.querySelector("tbody >tr:nth-child("+i+")>td:nth-child(1)").innerText;
+        	let name = document.querySelector("tbody >tr:nth-child("+i+")>td:nth-child(2)").innerText;
+        	let number = document.querySelector("tbody >tr:nth-child("+i+")>td:nth-child(3)").innerText;
+            arrayobj.push({"grade":grade,"name":name,"number":number});
+        }
+        console.log(arrayobj);
+	}
+</script>
+</head>
+<body>
+    <table border="1" id="tableId">
+        <thead>
+            <tr><td>기수</td><td>이름</td><td>번호</td></tr>
+        </thead>
+        <tbody>
+            <tr><td>101th</td><td>홍길동</td><td>10</td></tr>
+            <tr><td>102th</td><td>김유신</td><td>20</td></tr>
+            <tr><td>103th</td><td>유관순</td><td>30</td></tr>
+        </tbody>
+    </table>
+    <p>
+        <button onclick="javascriptFunc()">버튼</button>
+    </p>
+    <div id="display"></div>
+    <div id="display2"></div>
+</body>
+</html>

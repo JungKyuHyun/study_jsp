@@ -9,4 +9,45 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <context-param>
+  	<description>기본적인 설명을 하자면...</description>
+  	<param-name>email</param-name>
+  	<param-value>webmaster@bit.or.kr</param-value>
+  </context-param>
+  
+  <context-param>
+  	<description>파일 저장경로</description>
+  	<param-name>Filepath</param-name>
+  	<param-value>C:\\web\\download</param-value>
+  </context-param>
+  
+  
+  <!--
+  context-param으로 만든 변수는 각 페이지에 어떻게 가져다 쓸까
+  >>application 객체 사용해서 xml 가지고 있는 parameter 값을 read
+  
+  application 객체는 서버 전체에 사용할 수 있는 공유자원을 얻을 수 있고, 또는 생성도 할 수 있따.
+    -->
+  
+  <!--
+ web App 전체 페이지에서 발생하는 Error 처리 통합처리
+ 1. 상태코드(404, 500) 304(페이지 수정)
+ 2. 예외 객체 따라서 페이지 설정 ...
+ 
+ 최종 배포시에만!!(개발 도중에 Error 확인)
+    -->
+<!--     <error-page>
+    	<error-code>404</error-code>
+    	<location>/error/error404.jsp</location>
+    </error-page>
+    
+        <error-page>
+    	<error-code>500</error-code>
+    	<location>/error/error500.jsp</location>
+    </error-page>
+     -->
+    
+    
+    
 </web-app>

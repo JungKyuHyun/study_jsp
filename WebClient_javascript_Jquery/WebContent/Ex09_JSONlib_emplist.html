@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#btn").click( ()=>{
+		$.ajax({
+			url:"Ex09_Jsonlib_EmpList.jsp",
+			type:"get",
+			dataType:"json",
+			success: data=>{console.log(data);
+			$.each(data, (index, obj)=> {
+				$("#emplist").append("<tr><td>" + index + "</td><td>"+ obj.empno + "</td><td>" + obj.ename + "</td><td>"
+						+ obj.sal +"</td><td>" + obj.job + "</td></td>")
+			})
+			},
+			error: xhr => {console.log(xhr.status + " : ERROR");}
+		})
+	})
+	
+})
+
+
+</script>
+
+
+
+</head>
+<body>
+	<h3>EMP LIST</h3>
+	<input type="button" value="Emplist" id="btn">
+	<hr>
+	<table id="emplist" border="1">
+	</table>
+</body>
+</html>

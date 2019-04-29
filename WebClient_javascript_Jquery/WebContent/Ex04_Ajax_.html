@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(function{
+	$('#btn').click(()=>{
+		/* 이렇게 해도 되긴하나 복잡해서 안씀 
+		var name = $('#name').val();
+		const pwd = $('#pwd').val();
+		var param = "name= " + name + "&pwd= " pwd; //name=hong&pwd=1004
+		$.post("Ex04_Server.jsp", param, data=>);
+		*/
+		//개발 : parameter >> json 객체 형태로 제공
+		var param = {"name": $('#name').val(), "pwd":$('#pwd').val()}
+		$.post("Ex04_Server.jsp", param, data => {
+			$("#Message").html(data);
+		})
+		
+	})
+})
+</script>
+
+</head>
+<body>
+	<!--
+	동기방식
+	form >> input name = "" 속성 반드시
+	  -->
+	  <input type="text" id="name"><br>
+	  <input type="text" id="pwd"><br>
+	   <hr>
+      <div id = "message"></div>
+</body>
+</html>

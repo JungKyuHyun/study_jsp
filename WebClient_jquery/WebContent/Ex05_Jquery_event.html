@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./script/jquery-3.4.0.min.js"></script>
+<script type="text/javascript">
+	/*
+	Mouse Events	Keyboard Events		Form Events		Document/Window Events
+	click			keypress				submit			load
+	dblclick		keydown					change			resize
+	mouseenter		keyup					focus			scroll
+	mouseleave	 							blur			unload
+	
+	*/
+	
+	$(document).ready(function() {
+		$('#btncopy').click(function() {
+			$('#txtcopyuserid').val($("#txtuserid").val());
+		});
+		
+		//onChange > change
+		//주의사항
+		//element > value 값 : input
+		//element > text : p, div, option <div>방가방가</div>
+		//val(), text()
+		$('#select_hobby').change(function() {
+			//var text = $(':selected').text();
+			
+			var text = $('#select_hobby option:selected').text();
+			$('#txtselect').val(text);
+		});
+		
+		//txtpwd2 >> keyup이 되었을때 txtpwd 입력한 값하고 비교해서 암호 입력값이 같으면 id='message'안 div태그 안에 '암호가 일치합니다.'
+		//라는 문자를 출력하고 일치하지 않으면 '암호가 일치하지 않습니다.' 출력
+		
+		$('#txtpwd2').keyup(function() {
+			var pwd1 = $('#txtpwd').val();
+			var pwd2 = $('#txtpwd2').val();
+			if(pwd1 === pwd2){
+				$('#message').text("암호가일치합니다.");
+			}else{
+				$('#message').text("암호가일치하지 안씁니다..");
+			}
+		});
+		
+		$("input").focus(function(){
+			$(this).css("background-color",'gray');
+		});
+		
+		$("input").blur(function(){
+			$(this).css("background-color",'white');
+		});
+		//하나의 이벤트가 함수를 여러개 가질 수 있다.
+		$('P').hover(
+			function(){$(this).css('background-color','yellow')}, //in
+			function(){$(this).css('background-color','pink')}, //out
+		)
+		
+		
+	})
+
+</script>
+</head>
+<body>
+      <p>제이쿼리 이벤트</p>
+        ID : <input type="text" id = "txtuserid">
+        <hr>
+        <input type="button" id = "btncopy" value = "copy">
+        CopyID : <input type="text" id = "txtcopyuserid">
+        <hr>
+        <select id="select_hobby">
+            <option value="JAVA">java</option>
+            <option>javascript</option>
+            <option>jdbc</option>
+        </select>
+        <br>
+        <input type="text" id="txtselect">
+        <hr>
+        <table style="border:1px solid tomato">
+            <tr>
+                <td>암호</td>
+                <td><input type = "text" id=txtpwd size="20" maxlength="5"></td>
+            </tr>
+            <tr>
+                <td>암호확인</td>
+                <td><input type = "text" id=txtpwd2 size="20" maxlength="5"></td>
+            </tr>
+        </table>
+        <div id = "message" style = "color:tomato"></div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse; /* 붕괴하다 , 무너지다 */
+    width: 100%;
+}
+
+th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+td {
+    border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {  /* even 짝수     odd 홀수 */
+    background-color: #dddddd;
+}
+
+hr {
+	color : green;
+	width=400;
+}
+
+#main-container {
+	text-align: center;
+}
