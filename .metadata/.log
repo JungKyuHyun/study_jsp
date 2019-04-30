@@ -2680,3 +2680,42 @@ org.eclipse.swt.SWTException: Widget is disposed
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+!SESSION 2019-04-30 11:19:42.331 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=11.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/jkh/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/jkh/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-04-30 11:19:45.932
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface.text 2 0 2019-04-30 11:20:05.696
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.core.resources 2 2 2019-04-30 11:25:13.229
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2019-04-30 11:25:13.229
+!MESSAGE The project description file (.project) for 'WebServlet_3' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2019-04-30 11:40:49.537
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2019-04-30 11:40:49.537
+!MESSAGE session context was:(profile=_Users_jkh_eclipse_jee-2018-122_Eclipse.app_Contents_Eclipse, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-04-30 11:40:49.537
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.core,1.7.6.v20190415-1216
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-04-30 11:40:49.537
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.help.ui,1.7.6.v20190415-1216
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-04-30 11:40:49.537
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.ui,1.7.6.v20190416-1746
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-04-30 11:40:49.537
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.ui.css,1.7.6.v20190415-1216
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-04-30 11:40:49.537
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.epp.mpc,1.7.6.v20190416-1746
+
+!ENTRY org.eclipse.jface.text 2 0 2019-04-30 11:40:59.078
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-04-30 11:40:59.103
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
